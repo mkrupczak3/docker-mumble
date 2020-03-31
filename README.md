@@ -30,6 +30,15 @@ After the data volume has been created run the server container with the named d
 
     docker run -d -p 64738:64738 -p 64738:64738/udp -v mumble-data:/etc/mumble --name mumble-server phlak/mumble
 
+Running using Docker Compose:
+---------------------
+
+[Docker Compose](https://docs.docker.com/compose/) is a handy tool which manages configurations for deploying docker stacks. It's useful if you don't want the complexity of Kubernetes, but you still want to avoid having to type in a bunch of launch arguments for docker run every time you want to start something up.
+
+The included [docker-compose.yml](https://github.com/mkrupczak3/docker-mumble/blob/master/docker-compose.yml) (with the [docker-compose tool installed](https://docs.docker.com/compose/install/)) can be edited as desired, then run using the following command:
+
+    docker-compose up -d
+
 
 #### Optional 'docker run' arguments
 
